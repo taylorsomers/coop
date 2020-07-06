@@ -12,7 +12,7 @@
   * Bootstrap
   * CSS
   * HTML
-  * JavaScript
+  * JavaScrip
   * jQuery
   * Node
   * WebPack
