@@ -53,3 +53,7 @@ p.four {
   border: 2px;
   padding: 2px;
 }
+
+.form-group {
+  width: 60%;
+}
