@@ -5,7 +5,6 @@ export class UserGroup {
   }
   addUser(newUser){
     this.userIndex.push(newUser)
-  
   }
 }
 
@@ -14,5 +13,6 @@ export class User {
     let firstName = firstName;
     let lastName = lastName;
     let address = address;
+    let number = number;
   }
 }
