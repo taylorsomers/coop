@@ -1,17 +1,6 @@
-SECOND:
-  $ npm install
-  $ npm install dotenv-webpack --save-dev
-  $ git init
-  $ git add .gitignore
-  $ git commit -m "Activate .gitignore"
-  $ npm run build
-  $ git add .
-  $ git commit -m "Initial global commit"
-  $ npm run start
+# Programmers' Co-op Creator
 
-# [Program Title]
-
-  ### By [Author(s)]
+  ### By Frederick Ernest, Thomas Glenn, Beverly Potts, & Taylor Somers
 
 ## Description
 
@@ -38,7 +27,7 @@ SECOND:
 ## Installation
 
   1.  Download a web browser, such as Apple Safari, Brave, Google Chrome, Microsoft Edge, Mozilla Firefox, or Yandex.
-  2.  Navigate to [repository].
+  2.  Navigate to https://github.com/taylorsomers/coop.
   3.  Click the green "Clone or download" button at the right of the screen.
   4.  Select "Download ZIP."
   5.  Use a file extractor or unzip program (such as PeaZip, Unzipper, WinZip, Zipware, or 7-ZIP) to extract the ZIP files onto your computer.
@@ -72,7 +61,12 @@ SECOND:
 
   | Program Behavior | Example Behavior | Example Output |
   | ----------- | ----------- | ----------- |
-  |  |  |  |
+  | Program will allow the user to progress from one screen to another. |  |  |
+  | Program will take email and password from user to create a user profile stored in the browser. |  |  |
+  | Program will take user's state and store it with their user profile. |  |  |
+  | Program will present general information on successive pages once the user profile has been created. |  |  |
+  | Program will present contact information for worker co-op development organizations on a page following presentation of basic information on worker co-ops. |  |  |
+  | Program will provide API search function that allows the user to check with the U.S. patent office and see if their preferred business name is trademarked. |  |  |
   
 
 ## Known Bugs
@@ -81,9 +75,11 @@ SECOND:
 
 ### Contributors
 
+  * Frederick Ernest
+  * Thomas Glenn
+  * Beverly Potts
   * Taylor Somers
-  * [Other Contributor(s): Anyone who contributed at least %5 of the total product.]
 
 ### License
 
-This website is licensed under the GNU General Public License GPLv3. (C) 2020 Taylor Somers. All rights reserved.
+This website is licensed under the GNU General Public License GPLv3. (C) 2020 Frederick Ernest, Thomas Glenn, Beverly Potts, Taylor Somers. All rights reserved.
