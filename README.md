@@ -63,10 +63,23 @@
   | ----------- | ----------- | ----------- |
   | Program will allow the user to progress from one screen to another. |  |  |
   | Program will take email and password from user to create a user profile stored in the browser. |  |  |
-  | Program will take user's state and store it with their user profile. |  |  |
-  | Program will present general information on successive pages once the user profile has been created. |  |  |
+  | Program will take user's state, LinkedIn profile link, and GitHub profile link, and store them with their user profile. |  |  |
+  | Program will present information on successive pages once the user profile has been created. |  |  |
   | Program will present contact information for worker co-op development organizations on a page following presentation of basic information on worker co-ops. |  |  |
   | Program will provide API search function that allows the user to check with the U.S. patent office and see if their preferred business name is trademarked. |  |  |
+  | Program will provide API search function that allows the user to check with their state Secretary of State API to see if their preferred business name is trademarked. |  |  |
+  | Program will inform user that their company name cannot include the word "Cooperative" if they are registering it in California unless it is specifically registered as a cooperative corporation (not an LLC). |  |  |
+  | Program will direct user to the IRS page(s) for forming an LLC. |  |  |
+  | Program will direct user to their state Secretary of State's webpage for registering an LLC. |  |  |
+  | Program will provide boilerplate worker co-op charter with chosen business name. |  |  |
+  | Program will allower user to select calendar dates on which they are available for the founding meeting. |  |  |
+  | Program will provide boilerplate worker co-op founding meeting agenda with necessary business items, including selection of President/CEO and Treasurer/CFO. |  |  |
+  | Program will provide links to crowdsource services allowing the co-op to raise money for incorporation fees, registration fees, and bookkeeping software. |  |  |
+  | Program will provide link to IRS page with forms for creating LLC (which will need to be submitted with names of officers). |  |  |
+  | Program will provide link to local credit unions at which the Treasurer/CFO can apply for business checking & savings accounts. |  |  |
+  | Program will provide user with link to QuickBooks Online to set up bookkeeping system for the co-op. |  |  |
+  | Program will provide links to financial institutions that provide startup capital and non-equity funding (such as revenue-based startup financing) |  |  |
+
   
 
 ## Known Bugs
