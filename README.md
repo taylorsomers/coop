@@ -1,4 +1,4 @@
-# Programmers' Co-op Creator
+# Programmers' Co-op Creator blah blah blah
 
   ### By Frederick Ernest, Thomas Glenn, Beverly Potts, & Taylor Somers
 
