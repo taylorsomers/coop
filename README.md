@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-# Programmers' Co-op Creator blah blah blah
-=======
 # Programmers' Co-op Creator
-big read dog
->>>>>>> dev
 
   ### By Frederick Ernest, Thomas Glenn, Beverly Potts, & Taylor Somers
 
