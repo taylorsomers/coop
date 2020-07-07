@@ -2,6 +2,20 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from "jquery";
+import { User } from ' ./user.js';
+import { UserGroup } from './userGroup.js';
+
+function getGroupCollection() {
+  let groupCollectionString = localStorage.getItem("groupCollection");
+  let groupCollection = JSON.parse(groupCollectionString);
+
+  return groupCollection;
+}
+
+function storeGroupCollection() {
+  let groupCollectionString = JSON.stringify(groupCollection);
+  localStorage.setItem("groupCollection", groupCollectionString);
+}
 
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
@@ -15,6 +29,15 @@ $(document).ready(function() {
     const email = $("#email").val();
     const phone = parseInt($("#phone").val());
     const linkedIn = $("#linkedIn");
+    const gitHub = $("#gitHub");//add github field input 
+
+    let groupCollection = new GroupCollection();
+    let userGroup = new UserGroup();
+    let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
+    
+    userGroup.addUser(user);
+    groupCollection.addGroup(userGroup);
+    storeGroupCollection(groupCollection);
 
     $(".firstName").text(firstName);
     $(".lastName").text(lastName);
@@ -27,5 +50,12 @@ $(document).ready(function() {
     $(".linkedIn").text(linkedIn);
 
     $("#output").show();
+  });
+
+  $("#assign-name").click(() => {
+    let groupName =$("#groupName").val();
+    let groupCollection = getGroupCollection();
+    groupCollection.assignName(groupName);
+    storeGroupCollection(groupCollection);
   });
 });
