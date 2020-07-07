@@ -1,4 +1,4 @@
-import {User} from "../src/user.js"
+import {User, numPass} from "../src/user.js"
 
 describe('User', () => {
   test('Should fail if user fields are not ["Frederick", "Ernest", "1234 Sunshine Blvd", "Oregon", "1233456789", "fake@gmail.com", "linkd", "gitHub"]', () => {
@@ -11,5 +11,13 @@ describe('User', () => {
     expect(newUser.email).toEqual("fake@gmail.com");
     expect(newUser.linkd).toEqual("linkd");
     expect(newUser.gitHub).toEqual("gitHub");
+  });
+});
+
+describe('numPass', () => { 
+  test ('should fail if a user inputs anything but a 9 digit number for number', () => {
+    let newNumber = 1234567890;
+    let answer = numPass(newNumber);
+    expect(answer).toEqual(false);
   });
 });
