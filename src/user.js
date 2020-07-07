@@ -15,12 +15,9 @@ export class User {
     if (this.state === "Oregon"){
       return secStateOR;
     } else if (this.state === "Washington"){
-
+    let secStateWA = "https://www.sos.wa.gov/corps/limitedliabilitycompaniesllconlineandpaperregistrations.aspx";
+      return secStateWA;
     }
-  }
-  zipCheck(){
-    let zipCode = this.zip;
-    return zipCode;
   }
 }
 
