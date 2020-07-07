@@ -3,7 +3,7 @@ export class BankInfo {
     try {
       const myHeaders = new Headers();
       myHeaders.append("Accept", "application/json");
-      myHeaders.append("Authorization", "Bearer rO557Y2VDrYgrPcSEoLdKPSoTUG4hnDkOrS6mPtlDl3Qx1NcRH24Pv3s6KPdmFe2xeuBs-jQvQ1BgL6EtOi38H4Wqijt7EpG8CPOQADYLz2ifAEUCLDffH6W9LcEX3Yx");
+      myHeaders.append("Authorization", "Bearer APIKEY");
     
       const requestOptions = {
         method: 'GET',
