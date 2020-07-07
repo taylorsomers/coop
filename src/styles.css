@@ -1,0 +1,62 @@
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.elegantthemes.com/blog/wp-content/uploads/2018/12/top11.png");
+  height: 500px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+
+.hero-text {
+  text-align: left;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  
+}
+
+.hero-text h1{
+  font-size: 50px;
+}
+
+p.one {
+  float: left;
+  width: 30%;
+  margin: 10px;
+  border: 2px;
+  padding: 2px;
+  
+}
+
+p.two {
+  float: left;
+  width: 30%;
+  margin: 10px;
+  border: 2px;
+  padding: 2px;
+}
+
+p.three {
+  float: left;
+  width: 30%;
+  margin: 10px;
+  border: 2px;
+  padding: 2px;
+}
+
+p.four {
+  float: left;
+  clear: left;
+  width: 30%;
+  margin: 10px;
+  border: 2px;
+  padding: 2px;
+}
+
+.form-group {
+  width: 60%;
+  font-weight: bold;
+}
