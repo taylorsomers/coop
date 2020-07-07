@@ -1,5 +1,5 @@
 export class BankInfo {
-  async getBankInfo() {
+  async getBankInfo(zipCode) {
     try {
       const myHeaders = new Headers();
       myHeaders.append("Accept", "application/json");
@@ -11,11 +11,10 @@ export class BankInfo {
         redirect: 'follow'
       };
 
-      let response = await fetch("https://api.yelp.com/v3/businesses/search?location=OR&catagories=Banks&limit=3&rating=4&term=credit%20union", requestOptions)
+      let response = await fetch(`https://api.yelp.com/v3/businesses/search?location=${ zipCode }&catagories=Banks&limit=3&rating=4&term=credit%20union`, requestOptions)
       let jsonifiedResponse;
       if (response.ok && response.status == 200) {
         jsonifiedResponse = await response.json();
-        console.log(jsonifiedResponse);
       } else {
         console.log(response.statusText);
         // jsonifiedResponse = false;
@@ -28,6 +27,6 @@ export class BankInfo {
 }
 (async () => {
   let bankInfo = new BankInfo();
-  const response = await bankInfo.getBankInfo();
-  console.log(response);
+  const response = await bankInfo.getBankInfo(97405);
+  console.log(response.businesses);
 })();

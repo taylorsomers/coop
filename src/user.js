@@ -19,7 +19,8 @@ export class User {
     }
   }
   zipCheck(){
-  // this.zip is passed into async function here for API idexing of local financiers
+    let zipCode = this.zip;
+    return zipCode;
   }
 }
 
