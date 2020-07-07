@@ -11,12 +11,16 @@ export class User {
     this.gitHub = gitHub;
   }
   stateCheck(){
+    let orBizCenter = "https://bizcenter.org/";
     let secStateOR = "https://sos.oregon.gov/business/Pages/domestic-limited-liability-companies-forms.aspx";
     if (this.state === "Oregon"){
-      return secStateOR;
+      return (secStateOR, orBizCenter);
+
     } else if (this.state === "Washington"){
+    let waProjEq = "https://www.project-equity.org/wp-content/uploads/2019/09/Project-Equity-Washington-State-Small-Business-Closure-Crisis.pdf";
     let secStateWA = "https://www.sos.wa.gov/corps/limitedliabilitycompaniesllconlineandpaperregistrations.aspx";
-      return secStateWA;
+    let waDevCenter = "https://wsbdc.org/"
+      return (secStateWA, waDevCenter, waProjEq);
     }
   }
 }
