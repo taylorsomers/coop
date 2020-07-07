@@ -4,8 +4,14 @@ import './styles.css';
 import $ from "jquery";
 
 $(document).ready(function() {
+  
   $("#formOne").submit(function(event) {
     event.preventDefault();
+    $(".btn2").click(function(event) {
+      $("#formOne").show(event);
+    });
+   
+
     const firstName = $("#firstName").val();
     const lastName = $("#lastName").val();
     const street = $("#street").val();
@@ -28,4 +34,7 @@ $(document).ready(function() {
 
     $("#output").show();
   });
+
+  
+
 });
