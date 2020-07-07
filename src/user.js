@@ -10,4 +10,17 @@ export class User {
     this.linkd = linkd;
     this.gitHub = gitHub;
   }
+  stateCheck(){
+    let secStateOR = "https://sos.oregon.gov/business/Pages/domestic-limited-liability-companies-forms.aspx";
+    if (this.state === "Oregon"){
+      return secStateOR;
+    } else if (this.state === "Washington"){
+
+    }
+  }
+  zipCheck(){
+    let zipCode = this.zip;
+    return zipCode;
+  }
 }
+
