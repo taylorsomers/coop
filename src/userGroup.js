@@ -2,11 +2,9 @@
 
 export class UserGroup { 
   constructor() {
-  this.userIndex = [];
+    this.userIndex = [];
   }
   addUser(newUser){
-    this.userIndex.push(newUser)
+    this.userIndex.push(newUser);
   }
-
- 
 }

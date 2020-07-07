@@ -18,4 +18,4 @@ export class GroupCollection {
     this.groupIndex[0].name = name;
   }
 
-};
+}

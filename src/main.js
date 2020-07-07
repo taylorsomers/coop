@@ -2,8 +2,9 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from "jquery";
-import { User } from ' ./user.js';
+import { User } from './user.js';
 import { UserGroup } from './userGroup.js';
+import { GroupCollection } from './groupCollection.js';
 
 function getGroupCollection() {
   let groupCollectionString = localStorage.getItem("groupCollection");
@@ -12,7 +13,7 @@ function getGroupCollection() {
   return groupCollection;
 }
 
-function storeGroupCollection() {
+function storeGroupCollection(groupCollection) {
   let groupCollectionString = JSON.stringify(groupCollection);
   localStorage.setItem("groupCollection", groupCollectionString);
 }
