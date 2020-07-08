@@ -24,7 +24,7 @@ $(document).ready(function() {
     $(".btn2").click(function(event) {
       $("#formOne").show(event);
     });
-   
+  
 
     const firstName = $("#firstName").val();
     const lastName = $("#lastName").val();
@@ -36,6 +36,10 @@ $(document).ready(function() {
     const phone = parseInt($("#phone").val());
     const linkedIn = $("#linkedIn").val();
     const gitHub = $("#gitHub").val();//add github field input 
+
+    const agent = $("#agent").val();
+    const groupName = $("#groupName").val();
+    const regiAddress = $("#regiAddress").val();
 
     let groupCollection = new GroupCollection();
     let userGroup = new UserGroup();
@@ -58,15 +62,13 @@ $(document).ready(function() {
     $("#output").show();
   });
 
-  $("#assign-name").click(() => {
-    let groupName =$("#groupName").val();
+  $("#create-group").click(() => {
+    let agent = $("#agent").val();
+    let groupName = $("#groupName").val();
+    let regiAddress = $("#regiAddress").val();
     let groupCollection = getGroupCollection();
     groupCollection.assignName(groupName);
     storeGroupCollection(groupCollection);
   });
-<<<<<<< HEAD
 });
 
-=======
-});
->>>>>>> d19fdec92f56fa40e8e7d9f686d0e16daf724f84

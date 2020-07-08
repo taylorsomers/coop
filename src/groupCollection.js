@@ -18,4 +18,10 @@ export class GroupCollection {
     this.groupIndex[0].name = name;
   }
 
+  assignAgent(agent) {
+    this.groupIndex[0].agent = agent;
+  }
+
+  assignAddress
+
 }
