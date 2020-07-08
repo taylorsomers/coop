@@ -14,14 +14,17 @@ export class User {
   stateCheck(){
     let orBizCenter = "https://bizcenter.org/";
     let secStateOR = "https://sos.oregon.gov/business/Pages/domestic-limited-liability-companies-forms.aspx";
+    let aMalan = ["Audry", "Malan", "Cottage Grove, OR", "(307) 717 2559"];
+    let orArr = [secStateOR, orBizCenter, aMalan];
     if (this.state === "Oregon"){
-      return (secStateOR, orBizCenter);
+      return (orArr);
 
     } else if (this.state === "Washington"){
     let waProjEq = "https://www.project-equity.org/wp-content/uploads/2019/09/Project-Equity-Washington-State-Small-Business-Closure-Crisis.pdf";
     let secStateWA = "https://www.sos.wa.gov/corps/limitedliabilitycompaniesllconlineandpaperregistrations.aspx";
     let waDevCenter = "https://wsbdc.org/"
-      return (secStateWA, waDevCenter, waProjEq);
+    let waArr = [waProjEq, secStateWa, waDevCenter];
+      return (waArr);
     }
   }
 }
