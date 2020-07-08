@@ -24,7 +24,7 @@ $(document).ready(function() {
     $(".btn2").click(function(event) {
       $("#formOne").show(event);
     });
-   
+  
 
     const firstName = $("#firstName").val();
     const lastName = $("#lastName").val();
