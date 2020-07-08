@@ -5,10 +5,14 @@ import $ from "jquery";
 import { User } from './user.js';
 import { UserGroup } from './userGroup.js';
 
-function getGroup() {
+function getGroup(groupID) {
   let groupString = localStorage.getItem("group");
   let group = JSON.parse(groupString);
-  return group;
+  if (group.id === groupID){
+    return group;
+  } else { 
+    alert("No Match for Group ID");
+  }
 }
 
 function getSessionUser() {
@@ -50,7 +54,6 @@ $(document).ready(function() {
     const regiAddress = $("#regiAddress").val();
 
     let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
-    
     storeSessionUser(user);
     let group = new UserGroup(agent, groupName, regiAddress);
     userGroup.addUser(user);
@@ -69,14 +72,45 @@ $(document).ready(function() {
     $("#output").show();
   });
 
-  $("#create-group").click(() => {
-    let agent = $("#agent").val();
-    let groupName = $("#groupName").val();
-    let regiAddress = $("#regiAddress").val();
-    let groupCollection = getGroupCollection();
-    let ($("#groupName").val()) = new UserGroup();
-    groupCollection.assignName(groupName);
-    storeGroupCollection(groupCollection);
+  $("#formTwo").submit(function(event) {
+    event.preventDefault();
+    $(".btn2").click(function(event) {
+      $("#formTwo").show(event);
+    });
+  
+    const firstName = $("#firstName").val();
+    const lastName = $("#lastName").val();
+    const street = $("#street").val();
+    const city = $("#city").val();
+    const state = $("#state").val();
+    const zip = parseInt($("#zip").val());
+    const email = $("#email").val();
+    const phone = parseInt($("#phone").val());
+    const linkedIn = $("#linkedIn").val();
+    const gitHub = $("#gitHub").val();//add github field input 
+
+    const groupID = $("#group-id").val();
+    
+    let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
+    storeSessionUser(user);
+
+    let myGroup = getGroup(groupID);
+
+    myGroup.addUser(user);
+    storeGroup(myGroup);
+    
+    $(".firstName").text(firstName);
+    $(".lastName").text(lastName);
+    $(".street").text(street);
+    $(".city").text(city);
+    $(".state").text(state);
+    $(".zip").text(zip);
+    $(".email").text(email);
+    $(".phone").text(phone);
+    $(".linkedIn").text(linkedIn);
+
+    $("#output").show();
   });
+
 });
 
