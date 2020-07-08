@@ -5,6 +5,7 @@ export class GroupCollection {
   }
 
   addGroup(newGroup){
+    
     newGroup.id = this.assignID();
     this.groupIndex.push(newGroup);
   }
@@ -17,5 +18,11 @@ export class GroupCollection {
   assignName(name) {
     this.groupIndex[0].name = name;
   }
+
+  assignAgent(agent) {
+    this.groupIndex[0].agent = agent;
+  }
+
+  assignAddress
 
 }

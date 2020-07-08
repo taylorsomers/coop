@@ -37,6 +37,10 @@ $(document).ready(function() {
     const linkedIn = $("#linkedIn").val();
     const gitHub = $("#gitHub").val();//add github field input 
 
+    const agent = $("#agent").val();
+    const groupName = $("#groupName").val();
+    const regiAddress = $("#regiAddress").val();
+
     let groupCollection = new GroupCollection();
     let userGroup = new UserGroup();
     let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
@@ -54,19 +58,20 @@ $(document).ready(function() {
     $(".email").text(email);
     $(".phone").text(phone);
     $(".linkedIn").text(linkedIn);
+    $(".agent").text();
+    $(".groupName").text();
+    $(".regiAddress").text();
 
     $("#output").show();
   });
 
-  $("#assign-name").click(() => {
-    let groupName =$("#groupName").val();
+  $("#create-group").click(() => {
+    let agent = $("#agent").val();
+    let groupName = $("#groupName").val();
+    let regiAddress = $("#regiAddress").val();
     let groupCollection = getGroupCollection();
     groupCollection.assignName(groupName);
     storeGroupCollection(groupCollection);
   });
-<<<<<<< HEAD
 });
 
-=======
-});
->>>>>>> d19fdec92f56fa40e8e7d9f686d0e16daf724f84
