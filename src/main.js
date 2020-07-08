@@ -34,8 +34,8 @@ $(document).ready(function() {
     const zip = parseInt($("#zip").val());
     const email = $("#email").val();
     const phone = parseInt($("#phone").val());
-    const linkedIn = $("#linkedIn");
-    const gitHub = $("#gitHub");//add github field input 
+    const linkedIn = $("#linkedIn").val();
+    const gitHub = $("#gitHub").val();//add github field input 
 
     let groupCollection = new GroupCollection();
     let userGroup = new UserGroup();
@@ -64,5 +64,9 @@ $(document).ready(function() {
     groupCollection.assignName(groupName);
     storeGroupCollection(groupCollection);
   });
+<<<<<<< HEAD
 });
 
+=======
+});
+>>>>>>> d19fdec92f56fa40e8e7d9f686d0e16daf724f84
