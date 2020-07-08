@@ -84,7 +84,26 @@ p.four {
   padding: 2px;
 }
 
+body {
+  font-size: 15px;
+  
+}
+
+#formOne {
+  font-size: 15px;
+  display: none;
+}
+
 .form-group {
-  width: 60%;
+  width: 100%;
   font-weight: bold;
+  font-size: 15px;
+}
+
+.btn1 {
+  width: 100px;
+}
+
+.btn2 {
+  width: 100px;
 }
