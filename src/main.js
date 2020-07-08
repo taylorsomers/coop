@@ -59,15 +59,10 @@ $(document).ready(function() {
     $("#output").show();
   });
 
-<<<<<<< HEAD
-  
-
-=======
   $("#assign-name").click(() => {
     let groupName =$("#groupName").val();
     let groupCollection = getGroupCollection();
     groupCollection.assignName(groupName);
     storeGroupCollection(groupCollection);
   });
->>>>>>> 33c012742e26090e7c7d329c8190f0b31d3c1c70
 });
