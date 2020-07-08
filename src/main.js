@@ -35,8 +35,8 @@ $(document).ready(function() {
     const zip = parseInt($("#zip").val());
     const email = $("#email").val();
     const phone = parseInt($("#phone").val());
-    const linkedIn = $("#linkedIn");
-    const gitHub = $("#gitHub");//add github field input 
+    const linkedIn = $("#linkedIn").val();
+    const gitHub = $("#gitHub").val();//add github field input 
 
     let groupCollection = new GroupCollection();
     let userGroup = new UserGroup();
