@@ -4,18 +4,27 @@ import './styles.css';
 import $ from "jquery";
 import { User } from './user.js';
 import { UserGroup } from './userGroup.js';
-import { GroupCollection } from './groupCollection.js';
 
-function getGroupCollection() {
-  let groupCollectionString = localStorage.getItem("groupCollection");
-  let groupCollection = JSON.parse(groupCollectionString);
-
-  return groupCollection;
+function getGroup() {
+  let groupString = localStorage.getItem("group");
+  let group = JSON.parse(groupString);
+  return group;
 }
 
-function storeGroupCollection(groupCollection) {
-  let groupCollectionString = JSON.stringify(groupCollection);
-  localStorage.setItem("groupCollection", groupCollectionString);
+function getSessionUser() {
+  let sessionUserString = localStorage.getItem("user");
+  let sessionUser = JSON.parse(sessionUserString);
+  return sessionUser;
+}
+
+function storeSessionUser(user) {
+  let sessionUserString = JSON.stringify(user);
+  localStorage.setItem("user", sessionUserString);
+}
+
+function storeGroup(group) {
+  let groupString = JSON.stringify(group);
+  localStorage.setItem("group", groupString);
 }
 
 $(document).ready(function() {
@@ -25,7 +34,6 @@ $(document).ready(function() {
       $("#formOne").show(event);
     });
   
-
     const firstName = $("#firstName").val();
     const lastName = $("#lastName").val();
     const street = $("#street").val();
@@ -41,14 +49,13 @@ $(document).ready(function() {
     const groupName = $("#groupName").val();
     const regiAddress = $("#regiAddress").val();
 
-    let groupCollection = new GroupCollection();
-    let userGroup = new UserGroup();
     let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
     
+    storeSessionUser(user);
+    let group = new UserGroup(agent, groupName, regiAddress);
     userGroup.addUser(user);
-    groupCollection.addGroup(userGroup);
-    storeGroupCollection(groupCollection);
-
+    storeGroup(group);
+    
     $(".firstName").text(firstName);
     $(".lastName").text(lastName);
     $(".street").text(street);
@@ -67,6 +74,7 @@ $(document).ready(function() {
     let groupName = $("#groupName").val();
     let regiAddress = $("#regiAddress").val();
     let groupCollection = getGroupCollection();
+    let ($("#groupName").val()) = new UserGroup();
     groupCollection.assignName(groupName);
     storeGroupCollection(groupCollection);
   });
