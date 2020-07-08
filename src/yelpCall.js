@@ -17,7 +17,7 @@ export class BankInfo {
         jsonifiedResponse = await response.json();
       } else {
         console.log(response.statusText);
-        // jsonifiedResponse = false;
+        jsonifiedResponse = false;
       }
       return jsonifiedResponse;
     } catch(error) {
