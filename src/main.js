@@ -64,9 +64,5 @@ $(document).ready(function() {
     groupCollection.assignName(groupName);
     storeGroupCollection(groupCollection);
   });
-<<<<<<< HEAD
 });
 
-=======
-});
->>>>>>> d19fdec92f56fa40e8e7d9f686d0e16daf724f84
