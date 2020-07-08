@@ -6,11 +6,9 @@
   <link href="styles.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="user.js"></script>
-  <script src="mail.js"></script>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>Document</title>
 </head>
 
 <body>
@@ -19,6 +17,8 @@
       <h1>Web Developer Co-op</h1>
       <br>
       <h2>The place to start <br>for start-ups</h2>
+      <br>
+      <br>
     </div>
   </div>
   <br>
@@ -33,41 +33,11 @@
       <a href="" class="network">Network</a>
     </div>
     <br>
-    <h2>You are an intrepid web developer <br>taking a risk<br> to build your own company...</h2>
-    <h3>You know a lot about coding but you aren't certain about all the other stuff:</h3>
-    <ul>
-      <li>How to incorporate.</li>
-      <li>How to establish payroll.</li>
-      <li>Corporate Tax Filing.</li>
-      <li>etc.</li>
-    </ul>
-    <h2>We want you to succeed and we are here to help you.</h2>
-    <div class="row">
-      <p class="one" class="col-md-2"><strong>Welcome.</strong><br> We're glad you're here. <br> The goal of Web
-        Developers Co-op (WDC) is to simplify the initial phases of starting a web development business by providing all
-        the necessary forms, documentation, education, networking and advice all in one source for new business owners.
-      </p>
-
-      <p class="two" class="col-md-2"> <strong>This is the place </strong>to find information and resources on creating
-        a corporate entity, filing corporate taxes, creating a payroll and many others. We strive to connect our users
-        to legal advisors, accounting services, and inform them of their inellectual property options. In addition, we
-        help to curate a network of developers to discuss the subjects and tools pertinent to business creation.
-      </p>
-
-      <p class="three" class="col-md-2">
-        <strong>For everyone</strong> on your team to advance through your business build, WDC will monitor their
-        individual progress and verify that they have completed each step before moving on. This measured and verified
-        method keeps your business development moving smoothly so that you can concentrate on the marvelous web
-        architecture you intend to create.
-      </p>
-    </div>
-    <br>
-    <br>
-
-    
-    <h3>To get started, click on the button below.</h3>
-    
-    <form id="formOne">
+    <h3>Join an Existing Co-op.</h3>
+    <h3>Please provide your personal information followed by the your Co-op User Group ID#:</h3>
+<br>
+    <h4>Personal Information:</h4>
+    <form id="form-create">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
@@ -83,7 +53,7 @@
             <input id="street" class="form-control" type="text">
           </div>
 
-          <h3>Address</h3>
+          <h4>Address</h4>
           <div class="form-group">
             <label for="city">City:</label>
             <input id="city" class="form-control" type="text">
@@ -150,9 +120,8 @@
             <label for="zip">Zip/Postal Code:</label>
             <input id="zip" class="form-control" type="number">
           </div>
-        </div>
-   
-        <div class="col-md-6">
+       
+
           <div class="form-group">
             <label for="number">Phone Number:</label>
             <input id="number" class="form-control" type="number">
@@ -172,31 +141,37 @@
             <label for="gitHub">GitHub address:</label>
             <input id="gitHub" class="form-control" type="text">
           </div>
-          <button type="submit" class="btn1 btn-primary">Submit</button>
-          
+        </div>
+
+        <div class="col-md-6">
+          <h4>User Group Information:</h4>     
+            <div class="form-group">
+            <label for="groupName">Name of your Existing Group:</label>
+            <input id="groupName" class="form-control" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="currrentID">Group Number</label>
+            <input id="currentID" class="form-control" type="text">
+          </div>
+          <button id="join-group" type="submit" class="btn">Submit</button>
         </div>
       </div>
     </form>
-    
-    <p>If you wish to establish your own co-op, press this button:</p>
-    <a href="createCo-op.html"><button>Create!</button></a>
-    <br>
-    <br>
-    
-    <br>
-    <p>If you wish to join an existing co-op, press this button:</p>
-    <a href="joinCo-op.html"><button>Join!</button></a>
 
-    
-  </div>
-  </p>
+    <div id="joinOutput">
+      <p>Thanks, for creating your group. Here's your information:</p>
+        <ul>
+          <li>
 
-  <div id="output">
-    
-    <p>
+          </li>
+        </ul>
+    </div>
 
-    </p>
-  </div>
+    <p>If you wish to subscribe to our email list, press this button:</p>
+      <form method="post">
+        <input type="button" value="Send Email" onclick="sendEmail()"/>
+      </form>
   </div>
 </body>
 

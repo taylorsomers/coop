@@ -14,7 +14,6 @@ function getGroup(groupID) {
     alert("No Match for Group ID");
   }
 }
-
 function getSessionUser() {
   let sessionUserString = localStorage.getItem("user");
   let sessionUser = JSON.parse(sessionUserString);
@@ -30,14 +29,10 @@ function storeGroup(group) {
   let groupString = JSON.stringify(group);
   localStorage.setItem("group", groupString);
 }
-
-$(document).ready(function() {
-  $("#formOne").submit(function(event) {
+// New User - New Group Creation
+$(document).ready(function () {
+  $("#create-group").submit(function(event) {
     event.preventDefault();
-    $(".btn2").click(function(event) {
-      $("#formOne").show(event);
-    });
-  
     const firstName = $("#firstName").val();
     const lastName = $("#lastName").val();
     const street = $("#street").val();
@@ -59,25 +54,21 @@ $(document).ready(function() {
     userGroup.addUser(user);
     storeGroup(group);
     
-    $(".firstName").text(firstName);
-    $(".lastName").text(lastName);
-    $(".street").text(street);
-    $(".city").text(city);
-    $(".state").text(state);
-    $(".zip").text(zip);
-    $(".email").text(email);
-    $(".phone").text(phone);
-    $(".linkedIn").text(linkedIn);
-
-    $("#output").show();
+    $("#create-group").hide();
+    $("#createOutput").html(`<li> ${groupID}</li> <li> ${groupName}</li> <li> ${firstName} + ${lastName}</li>`);
+      let userOutput = user.stateCheck();
+      $("#createOutput").append(userOutput[0]);
+      $("#createOutput").append(userOutput[1]);
+      $("#createOutput").append(userOutput[2]);
+  //output to include location specific information links
+  //send yourself pertinent information via email.
   });
+});
 
-  $("#formTwo").submit(function(event) {
+$(document).ready(function () {
+  $("#join-group").submit(function(event) {
     event.preventDefault();
-    $(".btn2").click(function(event) {
-      $("#formTwo").show(event);
-    });
-  
+
     const firstName = $("#firstName").val();
     const lastName = $("#lastName").val();
     const street = $("#street").val();
@@ -89,28 +80,25 @@ $(document).ready(function() {
     const linkedIn = $("#linkedIn").val();
     const gitHub = $("#gitHub").val();//add github field input 
 
-    const groupID = $("#group-id").val();
-    
+    const agent = $("#agent").val();
+    const groupName = $("#groupName").val();
+    const regiAddress = $("#regiAddress").val();
+
     let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
     storeSessionUser(user);
-
-    let myGroup = getGroup(groupID);
-
-    myGroup.addUser(user);
-    storeGroup(myGroup);
+    let group = new UserGroup(agent, groupName, regiAddress);
+    userGroup.addUser(user);
+    storeGroup(group);
     
-    $(".firstName").text(firstName);
-    $(".lastName").text(lastName);
-    $(".street").text(street);
-    $(".city").text(city);
-    $(".state").text(state);
-    $(".zip").text(zip);
-    $(".email").text(email);
-    $(".phone").text(phone);
-    $(".linkedIn").text(linkedIn);
+    $("#join-group").hide();
+    $("#joinOutput").html(`<li> ${groupName}</li> <li>${firstName} + ${lastName}</li>`);
+    let userOutput = user.stateCheck();
+    $("#createOutput").append(userOutput[0]);
+    $("#createOutput").append(userOutput[1]);
+    $("#createOutput").append(userOutput[2]);
 
-    $("#output").show();
+  //output to include location specific information links
+  //send yourself pertinent information via email.
+
   });
-
 });
-
