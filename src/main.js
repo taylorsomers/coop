@@ -58,6 +58,9 @@ $(document).ready(function() {
     $(".email").text(email);
     $(".phone").text(phone);
     $(".linkedIn").text(linkedIn);
+    $(".agent").text();
+    $(".groupName").text();
+    $(".regiAddress").text();
 
     $("#output").show();
   });

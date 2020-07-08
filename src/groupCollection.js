@@ -5,7 +5,7 @@ export class GroupCollection {
   }
 
   addGroup(newGroup){
-
+    
     newGroup.id = this.assignID();
     this.groupIndex.push(newGroup);
   }
