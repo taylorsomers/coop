@@ -1,9 +1,10 @@
-export class UserGroup {
-  constructor(groupName) {
-  this.groupName = groupName;
-  this.userIndex = [];
+// Edited
+
+export class UserGroup { 
+  constructor() {
+    this.userIndex = [];
   }
   addUser(newUser){
-    this.userIndex.push(newUser)
+    this.userIndex.push(newUser);
   }
 }

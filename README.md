@@ -1,5 +1,4 @@
 # Programmers' Co-op Creator
-big read dog
 
   ### By Frederick Ernest, Thomas Glenn, Beverly Potts, & Taylor Somers
 
