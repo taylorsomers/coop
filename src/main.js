@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from "jquery";
 import { UserGroup } from './userGroup.js';
-// import { User } from './user.js';
+import { User } from './user.js';
 
 class User {
   constructor(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub) {
@@ -63,6 +63,7 @@ function storeGroup(group) {
 }
 
 $(document).ready(function () {
+  console.log("hello!");
   $("#form-create").submit(function (event) {
     event.preventDefault();
     const firstName = $("#firstName").val();
@@ -98,7 +99,6 @@ $(document).ready(function () {
 
   $("#form-join").submit(function (event) {
     event.preventDefault();
-
     const firstName = $("#firstName").val();
     const lastName = $("#lastName").val();
     const street = $("#street").val();

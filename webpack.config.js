@@ -19,13 +19,31 @@ module.exports = {
     new CleanWebpackPlugin(),
     new Dotenv(),
     new HtmlWebpackPlugin({
-      title: 'co-op',
+      filename: 'index.html',
       template: './src/index.html',
       inject: 'body'
-    })
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'createCo-op.html',
+      template: './src/createCo-op.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'joinCo-op.html',
+      template: './src/joinCo-op.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'refDocs.html',
+      template: './src/refDocs.html',
+    }),
   ],
   module: {
     rules: [
+      {
+        test: /.html$/,
+        use: [
+          'html-loader'
+        ]
+      },
       {
         test: /\.css$/,
         use: [
