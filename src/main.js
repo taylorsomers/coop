@@ -14,11 +14,11 @@ function getGroup(groupID) {
     alert("No Match for Group ID");
   }
 }
-function getSessionUser() {
-  let sessionUserString = localStorage.getItem("user");
-  let sessionUser = JSON.parse(sessionUserString);
-  return sessionUser;
-}
+// function getSessionUser() {
+//   let sessionUserString = localStorage.getItem("user");
+//   let sessionUser = JSON.parse(sessionUserString);
+//   return sessionUser;
+// }
 
 function storeSessionUser(user) {
   let sessionUserString = JSON.stringify(user);
