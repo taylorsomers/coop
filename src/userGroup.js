@@ -7,9 +7,8 @@ export class UserGroup {
     this.groupName = groupName;
     this.regiAddress = regiAddress;
     this.userIndex = [];
-    generateGroupID();
   }
-
+  
   generateGroupID() {
     let id = [];
     for (let i = 0; i < 5; i ++) {
@@ -18,7 +17,7 @@ export class UserGroup {
     }
     this.id = id;
   }
-
+  
   addUser(newUser){
     this.userIndex.push(newUser);
   }

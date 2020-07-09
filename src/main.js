@@ -51,6 +51,7 @@ $(document).ready(function () {
     let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
     storeSessionUser(user);
     let group = new UserGroup(agent, groupName, regiAddress);
+    group.generateGroupID();
     group.addUser(user);
     storeGroup(group);
     
