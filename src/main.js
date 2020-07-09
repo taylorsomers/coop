@@ -52,15 +52,15 @@ $(document).ready(function () {
     let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
     storeSessionUser(user);
     let group = new UserGroup(agent, groupName, regiAddress);
-    userGroup.addUser(user);
+    group.addUser(user);
     storeGroup(group);
     
     $("#create-group").hide();
-    $("#createOutput").html(`<li> ${groupID}</li> <li> ${groupName}</li> <li> ${firstName} + ${lastName}</li>`);
-      let userOutput = user.stateCheck();
-      $("#createOutput").append(userOutput[0]);
-      $("#createOutput").append(userOutput[1]);
-      $("#createOutput").append(userOutput[2]);
+    $("#createOutput").html(`<li> ${group.id}</li> <li> ${groupName}</li> <li> ${firstName} + ${lastName}</li>`);
+    let userOutput = user.stateCheck();
+    $("#createOutput").append(userOutput[0]);
+    $("#createOutput").append(userOutput[1]);
+    $("#createOutput").append(userOutput[2]);
   //output to include location specific information links
   //send yourself pertinent information via email.
   });
@@ -80,19 +80,16 @@ $(document).ready(function () {
     const phone = parseInt($("#phone").val());
     const linkedIn = $("#linkedIn").val();
     const gitHub = $("#gitHub").val();//add github field input 
-
-    const agent = $("#agent").val();
-    const groupName = $("#groupName").val();
-    const regiAddress = $("#regiAddress").val();
+    const groupID = $("#groupID").val();
 
     let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
     storeSessionUser(user);
-    let group = new UserGroup(agent, groupName, regiAddress);
-    userGroup.addUser(user);
-    storeGroup(group);
+    let myGroup = getGroup(groupID);
+    myGroup.addUser(user);
+    storeGroup(myGroup);
     
     $("#join-group").hide();
-    $("#joinOutput").html(`<li> ${groupName}</li> <li>${firstName} + ${lastName}</li>`);
+    $("#joinOutput").html(`<li> ${myGroup.groupName}</li> <li>${firstName} + ${lastName}</li>`);
     let userOutput = user.stateCheck();
     $("#createOutput").append(userOutput[0]);
     $("#createOutput").append(userOutput[1]);
