@@ -61,9 +61,9 @@ function storeGroup(group) {
   let groupString = JSON.stringify(group);
   localStorage.setItem("group", groupString);
 }
-// New User - New Group Creation
+
 $(document).ready(function () {
-  $("#create-group").submit(function () {
+  $("#form-create").submit(function (event) {
     event.preventDefault();
     const firstName = $("#firstName").val();
     const lastName = $("#lastName").val();
@@ -79,7 +79,6 @@ $(document).ready(function () {
     const groupName = $("#groupName").val();
     const regiAddress = $("#regiAddress").val();
 
-
     let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
     console.log("Hey, Look here!");
     storeSessionUser(user);
@@ -88,18 +87,16 @@ $(document).ready(function () {
     group.addUser(user);
     storeGroup(group);
 
-    $("#create-group").hide();
-    $("#createOutput").html(`<li> ${group.id}</li> <li> ${groupName}</li> <li> ${firstName} + ${lastName}</li>`);
+    $("#form-create").hide();
+    $("#createOutput").html(`<li>"Hello" ${group.id}</li> <li> ${groupName}</li> <li> ${firstName} + ${lastName}</li>`);
     let userOutput = user.stateCheck();
     $("#createOutput").append(userOutput[0]);
     $("#createOutput").append(userOutput[1]);
     $("#createOutput").append(userOutput[2]);
 
   });
-});
 
-$(document).ready(function () {
-  $("#join-group").submit(function () {
+  $("#form-join").submit(function (event) {
     event.preventDefault();
 
     const firstName = $("#firstName").val();
@@ -121,7 +118,7 @@ $(document).ready(function () {
     myGroup.addUser(user);
     storeGroup(myGroup);
 
-    $("#join-group").hide();
+    $("#form-join").hide();
     $("#joinOutput").html(`<li> ${myGroup.groupName}</li> <li>${firstName} + ${lastName}</li>`);
     let userOutput = user.stateCheck();
     $("#createOutput").append(userOutput[0]);
@@ -129,4 +126,5 @@ $(document).ready(function () {
     $("#createOutput").append(userOutput[2]);
 
   });
+
 });
