@@ -5,7 +5,8 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="user.js"></script>
+  <!-- <script src="./main.js"></script> -->
+  <!-- <script src="user.js"></script> -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
@@ -35,9 +36,9 @@
     <br>
     <h3>Join an Existing Co-op.</h3>
     <h3>Please provide your personal information followed by the your Co-op User Group ID#:</h3>
-<br>
+    <br>
     <h4>Personal Information:</h4>
-    <form id="form-create">
+    <form id="form-join">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
@@ -144,7 +145,7 @@
 
         <div class="col-md-6">
           <h4>User Group Information:</h4>     
-            <div class="form-group">
+          <div class="form-group">
             <label for="groupName">Name of your Existing Group:</label>
             <input id="groupName" class="form-control" type="text">
           </div>
@@ -160,17 +161,14 @@
 
     <div id="joinOutput">
       <p>Thanks, for creating your group. Here's your information:</p>
-        <ul>
-          <li>
+      <ul>
+        <li>
 
           </li>
-        </ul>
+      </ul>
     </div>
 
-    <p>If you wish to subscribe to our email list, press this button:</p>
-      <form method="post">
-        <input type="button" value="Send Email" onclick="sendEmail()"/>
-      </form>
+
   </div>
 </body>
 
