@@ -20,12 +20,11 @@ export class User {
       return (orArr);
 
     } else if (this.state === "Washington"){
-    let waProjEq = "https://www.project-equity.org/wp-content/uploads/2019/09/Project-Equity-Washington-State-Small-Business-Closure-Crisis.pdf";
-    let secStateWA = "https://www.sos.wa.gov/corps/limitedliabilitycompaniesllconlineandpaperregistrations.aspx";
-    let waDevCenter = "https://wsbdc.org/"
-    let waArr = [waProjEq, secStateWa, waDevCenter];
+      let waProjEq = "https://www.project-equity.org/wp-content/uploads/2019/09/Project-Equity-Washington-State-Small-Business-Closure-Crisis.pdf";
+      let secStateWA = "https://www.sos.wa.gov/corps/limitedliabilitycompaniesllconlineandpaperregistrations.aspx";
+      let waDevCenter = "https://wsbdc.org/";
+      let waArr = [waProjEq, secStateWA, waDevCenter];
       return (waArr);
     }
   }
 }
-
