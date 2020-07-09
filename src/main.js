@@ -84,7 +84,11 @@ $(document).ready(function () {
     const regiAddress = $("#regiAddress").val();
 
     let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
+<<<<<<< HEAD
+    console.log(user);
+=======
     console.log("Hey, Look here!");
+>>>>>>> 36ee244eb9e998b0e51517a6bb8b733767e2592a
     storeSessionUser(user);
     let group = new UserGroup(agent, groupName, regiAddress);
     group.generateGroupID();
@@ -115,8 +119,12 @@ $(document).ready(function () {
     const groupID = $("#groupID").val();
 
     let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
+<<<<<<< HEAD
+    console.log(user);
+=======
     console.log(user)
     storeSessionUser(user);
+>>>>>>> 36ee244eb9e998b0e51517a6bb8b733767e2592a
     let myGroup = getGroup(groupID);
     myGroup.addUser(user);
     storeGroup(myGroup);
