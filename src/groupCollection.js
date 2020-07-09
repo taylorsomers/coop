@@ -22,7 +22,4 @@ export class GroupCollection {
   assignAgent(agent) {
     this.groupIndex[0].agent = agent;
   }
-
-  assignAddress
-
 }

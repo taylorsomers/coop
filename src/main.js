@@ -37,9 +37,9 @@ $(document).ready(function() {
     const linkedIn = $("#linkedIn").val();
     const gitHub = $("#gitHub").val();//add github field input 
 
-    const agent = $("#agent").val();
-    const groupName = $("#groupName").val();
-    const regiAddress = $("#regiAddress").val();
+    //const agent = $("#agent").val();
+    //const groupName = $("#groupName").val();
+    //const regiAddress = $("#regiAddress").val();
 
     let groupCollection = new GroupCollection();
     let userGroup = new UserGroup();
@@ -66,11 +66,11 @@ $(document).ready(function() {
   });
 
   $("#create-group").click(() => {
-    let agent = $("#agent").val();
-    let groupName = $("#groupName").val();
-    let regiAddress = $("#regiAddress").val();
+    //let agent = $("#agent").val();
+    //let groupName = $("#groupName").val();
+    //let regiAddress = $("#regiAddress").val();
     let groupCollection = getGroupCollection();
-    groupCollection.assignName(groupName);
+    //groupCollection.assignName(groupName);
     storeGroupCollection(groupCollection);
   });
 });
