@@ -14,6 +14,7 @@ function getGroup(groupID) {
     alert("No Match for Group ID");
   }
 }
+
 function getSessionUser() {
   let sessionUserString = localStorage.getItem("user");
   let sessionUser = JSON.parse(sessionUserString);
@@ -49,6 +50,7 @@ $(document).ready(function () {
 
 
     let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
+    console.log(user);console.log(user);
     storeSessionUser(user);
     let group = new UserGroup(agent, groupName, regiAddress);
     group.generateGroupID();
@@ -83,6 +85,7 @@ $(document).ready(function () {
     const groupID = $("#groupID").val();
 
     let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
+    console.log(user)
     storeSessionUser(user);
     let myGroup = getGroup(groupID);
     myGroup.addUser(user);
