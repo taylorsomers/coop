@@ -105,3 +105,13 @@ body {
 .btn2 {
   width: 100px;
 }
+
+ol li {
+  padding: top 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.underlined {
+  text-decoration: underline;
+}
