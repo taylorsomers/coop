@@ -43,10 +43,10 @@ $(document).ready(function () {
     const phone = parseInt($("#phone").val());
     const linkedIn = $("#linkedIn").val();
     const gitHub = $("#gitHub").val();//add github field input 
-
     const agent = $("#agent").val();
     const groupName = $("#groupName").val();
     const regiAddress = $("#regiAddress").val();
+
 
     let user = new User(firstName, lastName, street, city, state, zip, phone, email, linkedIn, gitHub);
     storeSessionUser(user);
