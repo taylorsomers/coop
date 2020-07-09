@@ -24,5 +24,4 @@ export class GroupCollection {
   }
 
   assignAddress
-
 }
